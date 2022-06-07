@@ -1,0 +1,22 @@
+@charset "utf-8";
+/* CSS Document */
+@use "sass:map"; 
+
+/*----------------------------------------
+変数
+----------------------------------------*/
+$backGC: #fff;
+$mainColor: #049272;
+$orangeColor: #EE9600;
+$redColor: #DE0517;
+$grayColor: #707070;
+$lightGray: #AAAAAA;
+$breakpoints: (
+	"sp": "screen and (max-width: 768px)",
+	"pc": "screen and (min-width: 769px)"
+) !default;
+@mixin bp($breakpoint: bp) {
+	@media #{map.get($breakpoints, $breakpoint)} {
+		@content;
+	}
+}
